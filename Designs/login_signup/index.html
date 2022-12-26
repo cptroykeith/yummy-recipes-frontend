@@ -66,3 +66,39 @@
             <p1 class="copyright">Company Name © 2018</p1>
         </footer>
     </div1>
+    <script>
+        var loginForm=document.getElementById('login');
+        var registerForm=document.getElementById('register');
+        var z=document.getElementById('btn');
+        function register()
+        {
+            loginForm.style.left='-400px';
+            registerForm.style.left='50px';
+            z.style.left='110px';
+        }
+        function login()
+        {
+            loginForm.style.left='50px';
+            registerForm.style.left='450px';
+            z.style.left='0px';
+        }
+
+        var toggleLogin = document.getElementById('toggle-login');
+        var toggleRegister = document.getElementById('toggle-register');
+
+        window.onclick = function(event)
+        {
+            if (event.target == toggleLogin)
+            {
+                registerForm.style.display = "none";
+                loginForm.style.display = "unset";
+            }
+
+           if(event.target == toggleRegister){
+                loginForm.style.display = "none";
+                registerForm.style.display = "unset";
+            }
+        }
+     </script>
+</body>
+</html>
